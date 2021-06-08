@@ -1,0 +1,15 @@
+{
+  "name": "graphql-hello-world",
+  "version": "1.0.0",
+  "description": "This is just a test",
+  "main": "build/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "learning"
+  ],
+  "author": "Freddy Martinez",
+  "license": "ISC"
+}
