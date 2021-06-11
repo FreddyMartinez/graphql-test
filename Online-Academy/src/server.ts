@@ -1,13 +1,18 @@
 import express, { Application } from "express";
 import compression from "compression";
 import { createServer } from "http";
+import { ApolloServer } from "apollo-server-express";
+import schema from './schema/index';
+import expressPlayground from 'graphql-playground-middleware-express'
 
 const app: Application = express();
 app.use(compression());
 
-app.get("/", (req, res) => {
-	res.send("Hello Online Academy");
-});
+const server = new ApolloServer({ schema, introspection: true })
+
+server.applyMiddleware({ app });
+
+app.get("/", expressPlayground({ endpoint: "graphql" }));
 
 const httpServer = createServer(app);
 
