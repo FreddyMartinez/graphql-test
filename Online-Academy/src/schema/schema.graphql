@@ -1,6 +1,8 @@
 type Query {
-  "Students list"
+  "Academy students list"
   students: [Student!]!
+  "Student info found by id"
+  student(id: ID!): Student!
 }
 
 "Student Info"
