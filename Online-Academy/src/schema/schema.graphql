@@ -1,6 +1,6 @@
 type Query {
   "Students list"
-  students: String
+  students: [Student!]!
 }
 
 "Student Info"
