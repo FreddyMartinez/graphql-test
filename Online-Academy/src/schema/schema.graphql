@@ -3,6 +3,10 @@ type Query {
   students: [Student!]!
   "Student info found by id"
   student(id: ID!): Student!
+  "Academy courses list"
+  courses: [Course!]!
+  "Course info found by id"
+  course(id: ID!): Course!
 }
 
 "Student Info"
@@ -31,7 +35,7 @@ type Course {
 enum Level {
   ALL
   NOOBS
-  INTERMEDIATE
+  MEDIUM
   ADVANCED
 }
 

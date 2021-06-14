@@ -9,6 +9,14 @@ const type: IResolvers = {
 			);
 		},
 	},
+	Course: {
+		students: (parent) => {
+			return database.students.filter((student) =>
+				student.courses.includes(parent.id)
+			);
+		},
+		path: (parent) => `https://udemy.com${parent.path}`,
+	},
 };
 
 export default type;
