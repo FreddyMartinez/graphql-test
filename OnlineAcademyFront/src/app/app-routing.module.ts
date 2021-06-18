@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     component: CoursesListComponent, path: 'courses'
+  },
+  {
+    path: '**', redirectTo: '/students', pathMatch: 'full'
   }
 ];
 

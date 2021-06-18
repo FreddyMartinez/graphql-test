@@ -13,12 +13,14 @@ import { TestService } from './service/test.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { CoursesListComponent } from './components/courses-list/courses-list.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsListComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
