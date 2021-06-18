@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  graphqlUri: 'https://anilist.co/'
+  graphqlUri: 'http://localhost:3000/graphql'
 };
 
 /*

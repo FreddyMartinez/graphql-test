@@ -9,17 +9,25 @@ import { InMemoryCache } from '@apollo/client/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
+import { TestService } from './service/test.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StudentsListComponent } from './components/students-list/students-list.component';
+import { CoursesListComponent } from './components/courses-list/courses-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StudentsListComponent,
+    CoursesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
+    TestService,
     {
       provide: APOLLO_OPTIONS,
       useFactory: (httpLink: HttpLink) => {
