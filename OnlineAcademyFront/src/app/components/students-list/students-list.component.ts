@@ -9,6 +9,7 @@ import { Apollo, gql } from 'apollo-angular';
 export class StudentsListComponent implements OnInit {
 
   students: any[];
+  displayedColumns: string[] = ['id', 'name', 'email'];
   constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
@@ -17,12 +18,12 @@ export class StudentsListComponent implements OnInit {
         {
           students {
             id
+            name
             email
           }
         }
       `,
     }).subscribe(({data}) => {
-      console.log(data);
       this.students = data['students'];
     }, err => {
       console.log(err);

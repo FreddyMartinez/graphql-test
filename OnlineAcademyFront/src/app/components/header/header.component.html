@@ -1,4 +1,13 @@
-<nav>
-  <a routerLink="/students">Students</a>
-  <a routerLink="/courses">Courses</a>
+<nav mat-tab-nav-bar>
+  <ng-container *ngFor="let link of navLinks">
+    <a
+        mat-tab-link
+        [routerLink]="link.route"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+      >
+      {{ link.label }}
+    </a>
+  </ng-container>
 </nav>

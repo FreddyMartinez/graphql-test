@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { CoursesListComponent } from './components/courses-list/courses-list.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MatTableModule } from '@angular/material/table' 
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
+    MatTabsModule,
     BrowserAnimationsModule
   ],
   providers: [

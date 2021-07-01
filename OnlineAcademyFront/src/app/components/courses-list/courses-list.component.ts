@@ -9,6 +9,7 @@ import { Apollo, gql } from 'apollo-angular';
 export class CoursesListComponent implements OnInit {
 
   courses: any[];
+  displayedColumns: string[] = ['id', 'title', 'duration'];
   constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
@@ -23,7 +24,6 @@ export class CoursesListComponent implements OnInit {
         }
       `,
     }).subscribe( ({data}) => {
-      console.log(data);
       this.courses = data['courses'];
     }, err => {
       console.log(err);
